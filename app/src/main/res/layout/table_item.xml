@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <TableRow tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_column="1"
+                        android:background="#E8E6E6"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="@dimen/dp_12">
+
+
+                        <TextView
+                            android:id="@+id/tvday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#22242B"
+                            android:textSize="@dimen/sp_18"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/weekday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="xc"
+                            android:textAlignment="center"
+                            android:textColor="#22242B"
+                            android:textSize="@dimen/sp_18"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="@dimen/dp_12">
+
+
+                        <TextView
+                            android:id="@+id/a1CurrentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tvnotrun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Not Runnig"
+                            android:textColor="#171616"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tv_1a_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv1ago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/a2CurrentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tv2notrun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Not Runnig"
+                            android:textColor="#171616"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_2a_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv2ago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/a3CurrentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tv3notrun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Not Runnig"
+                            android:textColor="#171616"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_3a_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv3ago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:id="@+id/slCurrentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tvslnotrun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Not Runnig"
+                            android:textColor="#171616"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/tv_sl_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvslago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text=""
+                            android:textColor="#5B5B7E"
+                            android:textSize="@dimen/sp_12"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/ic_vertical_line" />
+
+
+    </LinearLayout>
+
+</layout>

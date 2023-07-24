@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colore_d">#FDC521</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorMaroon">#800000</color>
+    <color name="app_red">#FF002E</color>
+    <color name="colorBlue">#1e90ff</color>
+    <color name="colorPurple">#673AB7</color>
+    <color name="colorIndigo">#3F51B5</color>
+    <color name="colorTeel">#009688</color>
+    <color name="colorPink">#FF1493</color>
+    <color name="colorCyan">#00BCD4</color>
+    <color name="colorLime">#CDDC39</color>
+    <color name="colorOrange">#FF9800</color>
+    <color name="colorYellow">#FFE400</color>
+    <color name="colorBrown">#795548</color>
+    <color name="colorGray">#c2c2c2</color>
+    <color name="colorDeepOrange">#FF5722</color>
+    <color name="colorLightGreen">#8BC34A</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorAmber">#FFC107</color>
+    <color name="colorBorder">#303030</color>
+    <color name="colorHint">#636362</color>
+    <color name="colorItem">#F4F4F4</color>
+    <color name="colorTransparent">#80000000</color>
+    <color name="colorText">#5A5A5A</color>
+    <color name="colorSpin1">#801867C0</color>
+    <color name="colorTaskback">#503ce159</color>
+    <color name="app_colore">#121212</color>
+    <color name="text_resolution">#818181</color>
+    <color name="t15">#fb3a4a</color>
+    <color name="them">#73000000</color>
+    <color name="green">#64BA67</color>
+    <color name="sp_back">#EEF2FD</color>
+    <color name="card_colore">#FFFFFF</color>
+
+</resources>

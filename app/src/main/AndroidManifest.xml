@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.trainlivestatus">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".application.TrainPays"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TrainLiveStatus"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".livestatus.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".livestatus.TrainBySearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.TopSeatCalenderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Setting_status" />
+        <activity
+            android:name=".livestatus.CallLiveStationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.LiveStationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.ScheduleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.TrainscheduleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.TrainTimeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.SeatAvailableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.LiveTrainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.TrainListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.IntermediatestnActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.SearchTrainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.FindStationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.RouteDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.FairInquiryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.CategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar.Dashboard_status" />
+        <activity
+            android:name=".livestatus.IntroActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrainLiveStatus.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FinestWebViewTheme.Light" />
+
+    </application>
+
+</manifest>

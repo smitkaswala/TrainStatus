@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_rectangle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/ic_subtract">
+
+
+                <TextView
+                    android:id="@+id/tv_train_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/parasnath_sf_express_pt_12941"
+                    android:textColor="#22242B"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:id="@+id/emty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_live_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emty_view"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/live_status_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingLeft="@dimen/dp_40"
+                    android:paddingRight="@dimen/dp_40"
+                    android:text="@string/live_status"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp_18" />
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <!-- <TextView
+             android:id="@+id/tv_train_name"
+             android:layout_width="wrap_content"
+             android:layout_height="@dimen/dp_30"
+             android:layout_marginTop="8dp"
+             android:fontFamily="@font/poppins_medium"
+             android:text="@string/parasnath_sf_express_pt_12941"
+             android:textColor="@android:color/black"
+             android:textSize="@dimen/sp_18"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btn_live_status"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="8dp"
+             android:layout_marginBottom="8dp"
+             android:background="@drawable/button_bg"
+             android:fontFamily="@font/poppins_medium"
+             android:paddingLeft="@dimen/dp_40"
+             android:paddingRight="@dimen/dp_40"
+             android:text="@string/live_status"
+             android:textAllCaps="false"
+             android:textColor="@android:color/white"
+             android:textSize="@dimen/sp_18"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_train_name" />-->
+
+    </RelativeLayout>
+
+</layout>

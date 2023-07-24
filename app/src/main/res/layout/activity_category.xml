@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        tools:context=".livestatus.CategoryActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivcurrentimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/imgDescription"
+                        android:src="@drawable/ic_start_screen" />
+
+                    <ImageButton
+                        android:id="@+id/setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/circle_shape"
+                        android:contentDescription="@string/setting"
+                        android:gravity="center"
+                        android:src="@drawable/ic_setting"
+                        android:stateListAnimator="@animator/card_down_animation">
+
+
+                    </ImageButton>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ic_fare_in"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_fare_in" />
+
+                        <ImageView
+                            android:id="@+id/ic_search_train"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_search_train" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <ImageView
+                            android:id="@+id/ic_train_schedule"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_train_schedule" />
+
+                        <ImageView
+                            android:id="@+id/ic_live_train"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_live_train" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp">
+
+                        <ImageView
+                            android:id="@+id/ic_seat_availa"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_seat_availa" />
+
+                        <ImageView
+                            android:id="@+id/ic_live_station"
+                            style="@style/dashboard_imageview"
+                            android:contentDescription="@string/imgDescription"
+                            android:src="@drawable/ic_live_station" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

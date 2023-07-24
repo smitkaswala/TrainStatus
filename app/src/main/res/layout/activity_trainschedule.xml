@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".livestatus.TrainscheduleActivity">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/rv_toolbar"
+            style="@style/MyThemeOverlay_Toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/search_train"
+            app:titleCentered="true" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                 <TextView
+                     android:id="@+id/tv_get_start"
+                     android:layout_width="@dimen/_200sdp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/_20sdp"
+                     android:background="@drawable/btn_boarding_point"
+                     android:fontFamily="@font/poppins_medium"
+                     android:gravity="center"
+                     android:padding="@dimen/_10sdp"
+                     android:stateListAnimator="@animator/card_down_animation"
+                     android:text="@string/get_details"
+                     android:textAlignment="center"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/_16sdp"
+                     app:layout_constraintLeft_toLeftOf="parent"
+                     app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/cv_date" />
+
+
+                <View
+                    android:id="@+id/ellipse_37"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/circle_shape"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_170sdp"
+                    android:background="@drawable/line_vertical"
+                    android:backgroundTint="#22242B"
+                    app:layout_constraintLeft_toLeftOf="@id/ellipse_37"
+                    app:layout_constraintRight_toRightOf="@id/ellipse_37"
+                    app:layout_constraintTop_toBottomOf="@id/ellipse_37" />
+
+
+                <View
+                    android:id="@+id/ellipse_38"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:background="@drawable/circle_shape"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_170sdp"
+                    android:background="@drawable/line_vertical"
+                    android:backgroundTint="#22242B"
+                    app:layout_constraintLeft_toLeftOf="@id/ellipse_38"
+                    app:layout_constraintRight_toRightOf="@id/ellipse_38"
+                    app:layout_constraintTop_toBottomOf="@id/ellipse_38" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_top"
+                    android:layout_width="@dimen/_290sdp"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#1A00001A"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:layout_constraintBottom_toTopOf="@id/cv_date"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp">
+
+                        <View
+                            android:id="@+id/v_horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/horizontal_line"
+                            android:layerType="software"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_from"
+                            app:layout_constraintRight_toLeftOf="@id/swip"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tv_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Form"
+                            android:textColor="#868383"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/tv_stations"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Where from?"
+                            android:longClickable="false"
+                            android:textColor="#22242B"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintBottom_toTopOf="@id/v_horizontal"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_from"
+                            app:layout_constraintRight_toLeftOf="@id/swip"
+                            app:layout_constraintTop_toBottomOf="@id/tv_from" />
+
+
+                        <ImageButton
+                            android:id="@+id/swip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_swip_anim"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/ic_swap"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+
+                        <TextView
+                            android:id="@+id/tv_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="To"
+                            android:textColor="#868383"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/v_horizontal" />
+
+                        <EditText
+                            android:id="@+id/et_to"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Where to?"
+                            android:longClickable="false"
+                            android:textColor="#22242B"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_to"
+                            app:layout_constraintRight_toLeftOf="@id/swip"
+                            app:layout_constraintTop_toBottomOf="@id/tv_to" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_date"
+                    android:layout_width="@dimen/_290sdp"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#1A00001A"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:layout_constraintBottom_toTopOf="@id/tv_get_start"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintTop_toBottomOf="@id/cv_top">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Select Date"
+                            android:textColor="#868383"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_select_date"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/tv_select_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Departure date"
+                            android:longClickable="false"
+                            android:textColor="#22242B"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_class"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_date"
+                            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_open_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+
+                        <TextView
+                            android:id="@+id/tv_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Select Class"
+                            android:textColor="#868383"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@id/rv_seat_selected"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_select_date"
+                            app:layout_constraintTop_toBottomOf="@id/tv_select_date" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_seat_selected"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintLeft_toLeftOf="@id/tv_class"
+                            app:layout_constraintRight_toRightOf="@id/iv_open_cal"
+                            app:layout_constraintTop_toBottomOf="@id/tv_class"
+                            app:spanCount="3"
+                            tools:itemCount="8"
+                            tools:listitem="@layout/class_selection_item" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- <androidx.cardview.widget.CardView
+                     android:id="@+id/cv_date"
+                     android:layout_width="@dimen/_290sdp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#FFFFFF"
+                     app:cardCornerRadius="@dimen/_15sdp"
+                     app:layout_constraintLeft_toLeftOf="parent"
+                     app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/view2">
+
+
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent">
+
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginRight="@dimen/_20sdp"
+                             android:src="@drawable/ic_calendar"
+                             app:layout_constraintBottom_toBottomOf="@id/tv_select_date"
+                             app:layout_constraintRight_toRightOf="parent"
+                             app:layout_constraintTop_toTopOf="@id/tv_select_date" />
+
+                         <TextView
+                             android:id="@+id/tv_date"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="@dimen/_10sdp"
+                             android:text="Select Date"
+                             android:textColor="#868383"
+                             android:textSize="@dimen/_10sdp"
+                             app:layout_constraintLeft_toLeftOf="parent"
+                             app:layout_constraintTop_toTopOf="parent" />
+
+
+                         <EditText
+                             android:id="@+id/tv_select_date"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_5sdp"
+                             android:background="@android:color/transparent"
+                             android:clickable="false"
+                             android:cursorVisible="false"
+                             android:hint="4-8-2021"
+                             android:longClickable="false"
+                             android:textColor="#22242B"
+                             android:textSize="@dimen/_12sdp"
+                             app:layout_constraintLeft_toLeftOf="@id/tv_date"
+                             app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+
+                         <TextView
+                             android:id="@+id/tv_class"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_5sdp"
+                             android:text="Select Class"
+                             android:textColor="#868383"
+                             android:textSize="@dimen/_10sdp"
+                             app:layout_constraintLeft_toLeftOf="@id/tv_select_date"
+                             app:layout_constraintTop_toBottomOf="@id/tv_select_date" />
+
+                         <androidx.recyclerview.widget.RecyclerView
+                             android:id="@+id/rv_seat_selected"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_5sdp"
+                             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                             app:layout_constraintLeft_toLeftOf="@id/tv_class"
+                             app:layout_constraintRight_toRightOf="parent"
+                             app:layout_constraintTop_toBottomOf="@id/tv_class"
+                             app:spanCount="3"
+                             tools:itemCount="8"
+                             tools:listitem="@layout/class_selection_item" />
+
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                 </androidx.cardview.widget.CardView>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

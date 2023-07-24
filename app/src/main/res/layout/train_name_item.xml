@@ -1,0 +1,47 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/tvTrainNo"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/train_no_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_2sdp"
+                android:text="-------"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvTrainName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:fontFamily="@font/poppins_medium"
+                android:text="------------------"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000" />
+
+    </LinearLayout>
+</layout>

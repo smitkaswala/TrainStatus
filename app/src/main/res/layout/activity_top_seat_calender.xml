@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".livestatus.TopSeatCalenderActivity">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/rv_toolbar"
+            style="@style/MyThemeOverlay_Toolbar"
+            app:title="@string/seat_availability_calender"
+            app:titleCentered="true">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <RelativeLayout
+            android:id="@+id/rv_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rv_toolbar"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvtrainnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="09029 - LOK SHAKTI EXP"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvtrainnum"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Runs on :"
+                    android:textColor="#22242B"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <include
+                    android:id="@+id/tv_day"
+                    layout="@layout/item_qauta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/ll"
+                    android:layout_toEndOf="@id/tv" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="32dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvfrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="ST"
+                        android:textColor="#5B5B7E"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_right_arrow" />
+
+                    <TextView
+                        android:id="@+id/tvto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="ADI"
+                        android:textColor="#5B5B7E"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/spiine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Quota"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@drawable/spinner_background"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/sp_quata"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/white"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spiine"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_8">
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    tools:ignore="UselessParent">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="@dimen/dp_80"
+                                android:layout_column="1"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="#E8E6E6"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#5B5B7E"
+                                android:textSize="@dimen/sp_20" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_column="1"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="#E8E6E6"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="A1"
+                                android:textAlignment="center"
+                                android:textColor="#22242B"
+                                android:textSize="@dimen/sp_20" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_column="1"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="#E8E6E6"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="A2"
+                                android:textAlignment="center"
+                                android:textColor="#22242B"
+                                android:textSize="@dimen/sp_20" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_column="1"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="#E8E6E6"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="A3"
+                                android:textAlignment="center"
+                                android:textColor="#22242B"
+                                android:textSize="@dimen/sp_20" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_column="1"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="#E8E6E6"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="SL"
+                                android:textAlignment="center"
+                                android:textColor="#22242B"
+                                android:textSize="@dimen/sp_20" />
+
+                        </TableRow>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvtimetable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_3" />
+
+
+                    </TableLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorYellow"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

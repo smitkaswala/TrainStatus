@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/st"
+        tools:context=".livestatus.IntroActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/main_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.70" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:text="Welcome to \u000A Train Tracking App"
+                        android:textColor="#22242B"
+                        android:textSize="@dimen/_22sdp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Check your Train online with Your \u000A Best searching preferences"
+                        android:textColor="#6B6C70"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rv_"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.ncorti.slidetoact.SlideToActView
+                            android:id="@+id/li_start"
+                            style="@style/start_screen_linerlayout"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            app:area_margin="8dp"
+                            app:bump_vibration="50"
+                            app:slider_locked="false"
+                            app:inner_color="@color/slidetoact_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:outer_color="#FE634E"
+                            app:text="Sweep to Start" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

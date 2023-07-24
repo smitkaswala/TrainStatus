@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_12"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnlive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/live_status"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_route_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/route_schedule"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_seat_avab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/seat_availablity"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/cbsun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Sun"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbmon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Mon"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbtue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Tue"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbwed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Wed"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbthu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Thu"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbfri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Fri"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbsat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_checkbox_bg"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Sat"
+                    android:textColor="#0F1F40"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linsourde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_12"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_fast_train" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/source"
+                                android:textColor="#FDC521" />
+
+                            <TextView
+                                android:id="@+id/tvsource"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/st"
+                                android:textColor="#0F1F40"
+                                android:textSize="@dimen/_20sdp" />
+
+                            <TextView
+                                android:id="@+id/tvdep"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="00.30"
+                                android:textColor="#9695A8" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_vector_arrow" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/destination"
+                            android:textColor="#FDC521" />
+
+                        <TextView
+                            android:id="@+id/tvdestinations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/adi"
+                            android:textColor="#0F1F40"
+                            android:textSize="@dimen/_20sdp" />
+
+                        <TextView
+                            android:id="@+id/tvarrive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="00.30"
+                            android:textColor="#9695A8" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+
+                <!--<androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvclass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/ch_1a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="1A"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/ch_2a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="2A"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/ch_3a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="3A"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+
+                    <CheckBox
+                        android:id="@+id/ch_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="CC"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+                    <CheckBox
+                        android:id="@+id/ch_ea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="EA"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+                    <CheckBox
+                        android:id="@+id/ch_ec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="EC"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+                    <CheckBox
+                        android:id="@+id/ch_2s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="2S"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+                    <CheckBox
+                        android:id="@+id/ch_sl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_checkbox_bg"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="SL"
+                        android:textColor="#0F1F40"
+                        android:textSize="@dimen/sp_12" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/view_line_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/farerv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/view_line_bg" />
+
+            <TextView
+                android:id="@+id/tvtrainname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                android:text="BDTS ADI SUP SPL - 09029"
+                android:textColor="#868383"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/view_line_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_km" />
+
+                    <TextView
+                        android:id="@+id/tvdistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_watch" />
+
+                    <TextView
+                        android:id="@+id/tv_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30:50 HRS" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_speed" />
+
+                    <TextView
+                        android:id="@+id/tv_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="229 KM" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

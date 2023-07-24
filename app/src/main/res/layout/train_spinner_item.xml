@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_train"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:fontFamily="@font/poppins_medium"
+        android:scrollHorizontally="true"
+        android:text="Train"
+        android:freezesText="true"
+        android:textColor="#FDC521"
+        android:textSize="@dimen/_10sdp" />
+
+
+</LinearLayout>
+
+</layout>
