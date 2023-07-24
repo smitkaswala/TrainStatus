@@ -76,7 +76,7 @@ class MainRespository constructor(val api: ApiInterface) {
 
         return flow {
             val comment = api.nameorcode(id, "getTrainByNameOrCode")
-            delay(2000)
+            delay(3000)
             emit(comment)
         }.flowOn(Dispatchers.IO)
     }
